@@ -8,7 +8,7 @@
 #ifndef IGRAPHIC_HPP_
 #define IGRAPHIC_HPP_
 
-class Scene;
+#include "Scene.hpp"
 
 class IGraphic {
     public:

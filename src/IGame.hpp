@@ -8,7 +8,7 @@
 #ifndef IGAME_HPP_
 #define IGAME_HPP_
 
-class Scene;
+#include "Scene.hpp"
 
 class IGame {
     public:
