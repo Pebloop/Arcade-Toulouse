@@ -1,0 +1,29 @@
+@startuml core
+
+set namespaceSeparator ::
+
+namespace arcade {
+    class Core {
+        
+    }
+
+    namespace lib {
+        class Graphic {
+
+        }
+    }
+
+    namespace ecs {
+        class Game {
+            
+        }
+
+        class Scene {
+            
+        }
+    }
+    
+    Graphic --* Core
+}
+
+@enduml
