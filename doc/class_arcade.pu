@@ -3,27 +3,33 @@
 set namespaceSeparator ::
 
 namespace arcade {
-    class Core {
+    interface Core {
         
     }
 
     namespace lib {
-        class Graphic {
-
+        interface IGraphic {
+            + init(scene)
+            + update(scene, at)
+            + end(scene)
         }
     }
 
     namespace ecs {
-        class Game {
-            
-        }
-
-        class Scene {
-            
+        interface IGame {
+            + init(scene)
+            + update(scene, at)
+            + end(scene)
         }
     }
-    
-    Graphic --* Core
+
+    interface Scene {
+        
+    }
+
+    arcade::lib::IGraphic -up-* arcade::Core
+    arcade::ecs::IGame -up-* arcade::Core
+    arcade::Scene -up-* arcade::Core
 }
 
 @enduml
