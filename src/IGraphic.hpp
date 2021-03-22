@@ -8,18 +8,15 @@
 #ifndef IGRAPHIC_HPP_
 #define IGRAPHIC_HPP_
 
-#include "Scene.hpp"
+#include "ISystem.hpp"
 
 namespace arcade {
 
     namespace lib {
 
-        class IGraphic {
+        class IGraphic : public ISystem {
             public:
                 virtual ~IGraphic() {}
-                virtual void init(Scene &scene) = 0;
-                virtual void update(Scene &scene, float dt) = 0;
-                virtual void end(Scene &scene) = 0;
 
             protected:
             private:
