@@ -8,13 +8,13 @@
 #ifndef IGAME_HPP_
 #define IGAME_HPP_
 
-#include "ISystem.hpp"
+#include "ILibrary.hpp"
 
 namespace arcade {
 
     namespace lib {
 
-        class IGame : public ISystem {
+        class IGame : public ILibrary {
             public:
                 virtual ~IGame() {}
 

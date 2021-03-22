@@ -8,13 +8,13 @@
 #ifndef IGRAPHIC_HPP_
 #define IGRAPHIC_HPP_
 
-#include "ISystem.hpp"
+#include "ILibrary.hpp"
 
 namespace arcade {
 
     namespace lib {
 
-        class IGraphic : public ISystem {
+        class IGraphic : public ILibrary {
             public:
                 virtual ~IGraphic() {}
 
