@@ -3,27 +3,29 @@
 set namespaceSeparator ::
 
 namespace arcade {
-    interface Core
+    class Core
 
     namespace lib {
-        interface IGraphic {
+
+        interface ILibrary {
             + init(scene)
             + update(scene, at)
             + end(scene)
         }
 
+        interface IGraphic {
+        }
+
         interface IGame {
-            + init(scene)
-            + update(scene, at)
-            + end(scene)
         }
 
     }
 
     class Scene
 
-    arcade::lib::IGraphic -up-* arcade::Core
-    arcade::lib::IGame -up-* arcade::Core
+    arcade::lib::ILibrary -up-* arcade::Core
+    arcade::lib::IGraphic -up-|> arcade::lib::ILibrary
+    arcade::lib::IGame -up-|> arcade::lib::ILibrary
     arcade::Scene -up-* arcade::Core
 
 }

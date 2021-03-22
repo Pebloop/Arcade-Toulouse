@@ -6,6 +6,7 @@ L'architecture choisie de l'arcade est la suivante :
 ![core](core.png)
 
 * Le **Core** est le centre de l'arcade, elle est la partie opaque et non commune du projet.
-* L'interface **IGame** représente les libs de jeu
-* L'interface **IGraphic** représente les libs graphiques
+* L'interface **ILibrary** représente les librairies (les *.so).
+* L'interface **IGame** représente les libs de jeu.
+* L'interface **IGraphic** représente les libs graphiques.
 * La classe **Scene** contient la scene  avec lequels interagissent le jeu et la lib graphiques.
