@@ -5,8 +5,8 @@
 ** ISystem
 */
 
-#ifndef ISYSTEM_HPP_
-#define ISYSTEM_HPP_
+#ifndef ILIBRARY_HPP_
+#define ILIBRARY_HPP_
 
 #include "Scene.hpp"
 
@@ -14,9 +14,9 @@ namespace arcade {
 
     namespace lib {
 
-        class ISystem {
+        class ILibrary {
             public:
-                virtual ~ISystem() {}
+                virtual ~ILibrary() {}
                 virtual void init(Scene &scene) = 0;
                 virtual void update(Scene &scene, float dt) = 0;
                 virtual void end(Scene &scene) = 0;
@@ -29,4 +29,4 @@ namespace arcade {
 
 }
 
-#endif /* !ISYSTEM_HPP_ */
+#endif /* !ILIBRARY_HPP_ */
