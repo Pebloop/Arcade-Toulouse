@@ -8,13 +8,17 @@
 #ifndef SCENE_HPP_
 #define SCENE_HPP_
 
-class Scene {
-    public:
-        Scene() = default;
-        ~Scene() = default;
+namespace arcade {
 
-    protected:
-    private:
-};
+    class Scene {
+        public:
+            Scene() = default;
+            ~Scene() = default;
+
+        protected:
+        private:
+    };
+
+}
 
 #endif /* !SCENE_HPP_ */

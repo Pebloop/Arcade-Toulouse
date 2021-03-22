@@ -10,15 +10,23 @@
 
 #include "Scene.hpp"
 
-class IGame {
-    public:
-        virtual ~IGame() {}
-        virtual void init(Scene &scene) = 0;
-        virtual void update(Scene &scene, float dt) = 0;
-        virtual void end(Scene &scene) = 0;
+namespace arcade {
 
-    protected:
-    private:
-};
+    namespace lib {
+
+        class IGame {
+            public:
+                virtual ~IGame() {}
+                virtual void init(Scene &scene) = 0;
+                virtual void update(Scene &scene, float dt) = 0;
+                virtual void end(Scene &scene) = 0;
+
+            protected:
+            private:
+        };
+
+    }
+
+}
 
 #endif /* !IGAME_HPP_ */
