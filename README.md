@@ -26,10 +26,12 @@ N'hésitez pas à contacter l'un d'entre-nous, nous vous répondrons dès que po
 # Comment débuter
 Voici un conseil pas à pas pour débuter :
 
-* Si vous ne savez pas comment utiliser les *issues* github ou faire une pull request, nous vous conseillons de jeter un oeil à [ce tutoriel](https://github.com/TempoDev/Arcade-Toulouse/blob/master/debat.md).
+* Si vous ne savez pas comment utiliser les [issues](https://github.com/TempoDev/Arcade-Toulouse/issues) et les [discussions](https://github.com/TempoDev/Arcade-Toulouse/discussions) github ou faire une [pull request](https://github.com/TempoDev/Arcade-Toulouse/pulls), nous vous conseillons de jeter un oeil à [ce tutoriel](https://github.com/TempoDev/Arcade-Toulouse/blob/master/debat.md).
 
 * Allez regarder la [documentation](./doc) pour avoir un aperçu à jour de l'architecture, des interfaces et des API.
 
 * Regardez les [fichiers sources](./src) et téléchargez la dernière version disponible dans [Releases](https://github.com/TempoDev/Arcade-Toulouse/releases).
+
+* Participez au [débat principal](https://github.com/TempoDev/Arcade-Toulouse/discussions/9) de l'arcade.
 
 * Participez aux débats, proposez des idées et venez jeter un oeil fréquents aux mises à jours et changement dans les fichiers communs et la documentation (pourquoi ne pas jeter un oeil aux commits pour voir les changements effectués ?).
