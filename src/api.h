@@ -13,9 +13,18 @@ extern "C"
 {
 #endif
 
+#include <time.h>
+
+typedef struct library_info {
+    enum { GAME, GRAPHIC } type;
+    const char *name;
+    time_t date;
+    const char *desc;
+} library_info_t;
+
 void *library_create();
 void library_delete(void *library);
-char *library_get_data();
+library_info_t library_get_data();
 
 #ifdef __cplusplus
 } // extern "C"
