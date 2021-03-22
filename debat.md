@@ -4,6 +4,29 @@ Une proposition peut être faite en ouvrant une issue github, qui sera ensuite a
 
 Un exemple d'issue est disponible [ici](https://github.com/TempoDev/Arcade-Toulouse/issues/1)
 
+# Débattre et discuter
+Vous pouvez aller dans l'onglet *Discussion* du repo pour parler et proposer divers choses pour l'arcade.
+Vous pouvez créer de nouvelles dicussions et participer aux débats.
+
+## Onglet discussion
+
+![discussion tab](res/disc-sc-00.png)
+
+1. Les différentes catégories du forum
+    * Général : discussions générales
+    * Ideas : pour proposer des idées
+    * Questions : pour poser des questions
+2. Les différentes conversations
+3. Créer une nouvelles discussion
+> /!\ Vous pouvez créer de nouvelles conversations dès que vous voulez aborder un sujet ou poser une question. Néanmoins merci d'éviter de dupliquer des conversations, au risque de noyer d'autres conversations importantes.
+
+## page de discussion
+
+![discussion page](res/disc-sc-01.png)
+Vous pouvez participer et répondre sur la page de discussion. proposez vos idées et ouvrez des issues lorsqu'une idée se précise.
+
+jetez un oeil à la discussion principale [ici](https://github.com/TempoDev/Arcade-Toulouse/discussions/9).
+
 # Créer une issue
 ## 1 - Ouvrez le panel des *Issues*
 ![click on issue](res/debat-sc-00.png)
