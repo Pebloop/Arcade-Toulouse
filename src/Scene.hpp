@@ -10,10 +10,9 @@
 
 namespace arcade {
 
-    class Scene {
+    class IScene {
         public:
-            Scene() = default;
-            ~Scene() = default;
+            virtual ~Scene() = default;
 
         protected:
         private:
