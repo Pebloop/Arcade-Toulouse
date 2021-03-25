@@ -5,8 +5,8 @@
 ** Scene
 */
 
-#ifndef SCENE_HPP_
-#define SCENE_HPP_
+#ifndef ISCENE_HPP_
+#define ISCENE_HPP_
 
 namespace arcade {
 
@@ -20,4 +20,4 @@ namespace arcade {
 
 }
 
-#endif /* !SCENE_HPP_ */
+#endif /* !ISCENE_HPP_ */
