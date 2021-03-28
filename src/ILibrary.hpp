@@ -8,7 +8,7 @@
 #ifndef ILIBRARY_HPP_
 #define ILIBRARY_HPP_
 
-#include "Scene.hpp"
+#include "IScene.hpp"
 
 namespace arcade {
 
@@ -17,9 +17,9 @@ namespace arcade {
         class ILibrary {
             public:
                 virtual ~ILibrary() {}
-                virtual void init(Scene &scene) = 0;
-                virtual void update(Scene &scene, float dt) = 0;
-                virtual void end(Scene &scene) = 0;
+                virtual void init(IScene &scene) = 0;
+                virtual void update(IScene &scene, float dt) = 0;
+                virtual void end(IScene &scene) = 0;
 
             protected:
             private:
