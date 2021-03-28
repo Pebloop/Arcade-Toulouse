@@ -8,6 +8,12 @@
 #ifndef API_H_
 #define API_H_
 
+#ifdef _WIN32
+#define EXPORT __declspec(dllexport)
+#else
+#define EXPORT
+#endif
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -22,9 +28,9 @@ typedef struct library_info {
     const char *desc;
 } library_info_t;
 
-void *library_create();
-void library_delete(void *library);
-library_info_t library_get_data();
+EXPORT void *library_create();
+EXPORT void library_delete(void *library);
+EXPORT library_info_t library_get_data();
 
 #ifdef __cplusplus
 } // extern "C"
