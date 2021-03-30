@@ -21,6 +21,8 @@ namespace arcade {
                 virtual void update(IScene &scene, float dt) = 0;
                 virtual void end(IScene &scene) = 0;
 
+                virtual bool quitRequested() const = 0;
+
             protected:
             private:
         };
