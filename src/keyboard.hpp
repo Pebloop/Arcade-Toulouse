@@ -10,7 +10,7 @@
 
 namespace arcade {
 
-    enum class {
+    enum class Key {
         KEY_ESCAPE,
         KEY_BACKSPACE,
         KEY_RIGHT,
@@ -79,7 +79,7 @@ namespace arcade {
         KEY_8,
         KEY_9,
         KEY_0,
-    } Key;
+    };
 
 }
 
