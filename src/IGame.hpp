@@ -12,17 +12,19 @@
 
 namespace arcade {
 
-    namespace lib {
+namespace lib {
 
-        class IGame : public ILibrary {
-            public:
-                virtual ~IGame() {}
+    class IGame : public ILibrary {
+    public:
+        virtual ~IGame()
+        {
+        }
 
-            protected:
-            private:
-        };
+    protected:
+    private:
+    };
 
-    }
+}
 
 }
 
