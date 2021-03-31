@@ -14,6 +14,8 @@ class IScene {
 public:
     virtual ~IScene() = default;
 
+    virtual void exit() const = 0;
+
 protected:
 private:
 };

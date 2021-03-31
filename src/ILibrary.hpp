@@ -16,9 +16,7 @@ namespace lib {
 
     class ILibrary {
     public:
-        virtual ~ILibrary()
-        {
-        }
+        virtual ~ILibrary() = default;
         virtual void init(IScene& scene) = 0;
         virtual void update(IScene& scene, float dt) = 0;
         virtual void end(IScene& scene) = 0;

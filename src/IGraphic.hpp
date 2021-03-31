@@ -20,6 +20,8 @@ namespace lib {
         {
         }
 
+        virtual bool quitRequested() const = 0;
+
     protected:
     private:
     };
