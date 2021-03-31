@@ -10,16 +10,15 @@
 
 #include "ILibrary.hpp"
 
-namespace arcade
-{
+namespace arcade {
 
-namespace lib
-{
+namespace lib {
 
-    class IGraphic : public ILibrary
-    {
+    class IGraphic : public ILibrary {
     public:
-        virtual ~IGraphic() {}
+        virtual ~IGraphic()
+        {
+        }
 
         virtual bool quitRequested() const = 0;
 
