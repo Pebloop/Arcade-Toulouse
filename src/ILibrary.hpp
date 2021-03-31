@@ -12,20 +12,20 @@
 
 namespace arcade {
 
-    namespace lib {
+namespace lib {
 
-        class ILibrary {
-            public:
-                virtual ~ILibrary() {}
-                virtual void init(IScene &scene) = 0;
-                virtual void update(IScene &scene, float dt) = 0;
-                virtual void end(IScene &scene) = 0;
+    class ILibrary {
+    public:
+        virtual ~ILibrary() = default;
+        virtual void init(IScene& scene) = 0;
+        virtual void update(IScene& scene, float dt) = 0;
+        virtual void end(IScene& scene) = 0;
 
-            protected:
-            private:
-        };
+    protected:
+    private:
+    };
 
-    }
+}
 
 }
 

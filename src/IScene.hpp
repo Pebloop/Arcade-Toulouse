@@ -10,13 +10,15 @@
 
 namespace arcade {
 
-    class IScene {
-        public:
-            virtual ~IScene() = default;
+class IScene {
+public:
+    virtual ~IScene() = default;
 
-        protected:
-        private:
-    };
+    virtual void exit() const = 0;
+
+protected:
+private:
+};
 
 }
 
