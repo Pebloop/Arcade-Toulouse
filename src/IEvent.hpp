@@ -9,12 +9,12 @@
 #define IEVENT_HPP_
 
 class IEvent {
-    public:
-        IEvent() = default;
-        ~IEvent() = default;
+public:
+    IEvent() = default;
+    ~IEvent() = default;
 
-    protected:
-    private:
+protected:
+private:
 };
 
 #endif /* !IEVENT_HPP_ */

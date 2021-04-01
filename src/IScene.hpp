@@ -17,7 +17,7 @@ public:
     virtual ~IScene() = default;
 
     virtual void exit() const = 0;
-    virtual void pushEvent(IEvent &event) = 0;
+    virtual void pushEvent(IEvent& event) = 0;
 
 protected:
 private:

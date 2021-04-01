@@ -83,9 +83,8 @@ enum class Key {
     KEY_0,
 };
 
-struct KeyboardEvent : public IEvent
-{
-    Key key;  
+struct KeyboardEvent : public IEvent {
+    Key key;
 };
 
 }
