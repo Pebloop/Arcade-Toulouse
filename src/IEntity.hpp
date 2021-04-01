@@ -16,8 +16,7 @@ namespace arcade {
 
 class IEntity {
 public:
-    IEntity() = default;
-    ~IEntity() = default;
+    virtual ~IEntity() {};
 
     // get entity position
     virtual Vector3 getPosition() const = 0;
