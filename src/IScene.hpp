@@ -27,6 +27,8 @@ public:
     virtual IEntity &getEntity(size_t index) = 0;
     virtual void removeEntity(std::string name) = 0;
 
+    virtual void addScore(float score) = 0;
+
     virtual void forEach(std::function<void(IEntity &)>) const = 0;
 
 protected:
