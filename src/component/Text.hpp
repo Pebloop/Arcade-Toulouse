@@ -15,12 +15,14 @@ namespace arcade {
 
 namespace component {
 
-struct Text : public IComponent {
-    std::string text;
+    struct Text : public IComponent {
+        std::string text;
 
-    ComponentType getType() const override
-        {return ComponentType::TEXT;}
-};
+        ComponentType getType() const override
+        {
+            return ComponentType::TEXT;
+        }
+    };
 
 }
 

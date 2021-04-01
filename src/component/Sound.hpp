@@ -14,12 +14,14 @@ namespace arcade {
 
 namespace component {
 
-struct Sound : public IComponent {
-    std::string path;
+    struct Sound : public IComponent {
+        std::string path;
 
-    ComponentType getType() const override
-        {return ComponentType::SOUND;}
-};
+        ComponentType getType() const override
+        {
+            return ComponentType::SOUND;
+        }
+    };
 
 }
 
