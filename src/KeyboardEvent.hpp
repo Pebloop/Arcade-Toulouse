@@ -8,6 +8,8 @@
 #ifndef KEYBOARD_HPP_
 #define KEYBOARD_HPP_
 
+#include "IEvent.hpp"
+
 namespace arcade {
 
 enum class Key {
@@ -79,6 +81,11 @@ enum class Key {
     KEY_8,
     KEY_9,
     KEY_0,
+};
+
+struct KeyboardEvent : public IEvent
+{
+    Key key;  
 };
 
 }

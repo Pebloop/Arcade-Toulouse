@@ -8,7 +8,11 @@
 #ifndef MOUSE_HPP_
 #define MOUSE_HPP_
 
-struct MouseEvent {
+#include "IEvent.hpp"
+
+namespace arcade {
+
+struct MouseEvent : public IEvent {
     int x;
     int y;
     enum {
@@ -17,5 +21,7 @@ struct MouseEvent {
         MOUSE_AUXILIARY,
     } button;
 };
+
+}
 
 #endif /* !MOUSE_HPP_ */

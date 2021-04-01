@@ -10,8 +10,17 @@ L'architecture choisie de l'arcade est la suivante :
 * L'interface **IGame** représente les libs de jeu.
 * L'interface **IGraphic** représente les libs graphiques.
 * L'interface **IScene** contient la scene  avec lequels interagissent le jeu et la lib graphiques.
+* L'interface **IEvent** représente les évenements
+* La classe **KeyboardEvent** est un évenement concernant le clavier
+* La classe **MouseEvent** est un évenement concernant la souris
 
 ## Détails
+
+### **IScene**
+
+**IScene** est une interface qui représente une scene. Elle Contient :
+* `exit` : pour quitter la scène
+* `pushEvent` : pour que la lib graphique ajoute un nouvel événement à appliquer (avec les callback de `IGame`)
 
 ### **ILibrary**
 
@@ -62,13 +71,17 @@ Certains champs sont facultatifs mais il serait bon d'au moins les mettre à 0 p
 
 Ceux sont des call back. Cela signifie qu'elle sont appelée à chaques fois que l'évenement a lieu, par le core. Elle est implémenté par **IGame** qui défini qu'elles actions ont lieu lorsque cette évenement est appelé.
 
-### **keyboard.hpp**
+### **IEvent**
+**IEvent** est une interface qui regroupe tous les évenements.
 
-**keyboard.hpp** est un fichier qui contient une énumération **`Key`** qui définie les touches du clavier. Elle est utilisé pour les événement du clavier.
+### **KeyboardEvent.hpp**
 
-### **Mouse.hpp**
+**KeyboardEvent.hpp** est un fichier qui contient une énumération **`Key`** qui définie les touches du clavier. Elle est utilisé pour les événement du clavier.
+Elle contient aussi la structure **`KeyboardEvent`** qui défini un évenement du clavier, composé de `Key`.
 
-**Mouse.hpp** est un fichier qui contient une structure **`MouseEvent`** qui définie un évenement souris.
+### **MouseEvent.hpp**
+
+**MouseEvent.hpp** est un fichier qui contient une structure **`MouseEvent`** qui définie un évenement souris.
 Elle contient :
 * `int x` : la position de la souris sur la longueur.
 * `int y` : la position de la souris sur la hauter.

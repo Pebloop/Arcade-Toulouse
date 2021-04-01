@@ -17,11 +17,38 @@ namespace arcade {
         }
 
         interface IGame {
+            + void onKeyDown(event)
+            + void onKeyPressed(event)
+            + void onKeyReleased(event)
+            + void onMouseDown(event)
+            + void onMousePressed(event)
+            + void onMouseReleased(event)
         }
 
     }
 
-    interface IScene
+    interface IScene {
+        + pushEvent(event)
+    }
+
+    interface IEvent {
+
+    }
+
+    class KeyBoardEvent {
+        + Key key
+    }
+
+    class MouseEvent {
+        + x
+        + y
+        + button
+    }
+
+    arcade::KeyBoardEvent -up-|> arcade::IEvent
+    arcade::MouseEvent -up-|> arcade::IEvent
+
+    arcade::IEvent --> arcade::lib::IGame
 
     arcade::lib::ILibrary -up-* arcade::Core
     arcade::lib::IGraphic -up-|> arcade::lib::ILibrary
