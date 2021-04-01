@@ -15,14 +15,16 @@ namespace arcade {
 
 namespace component {
 
-struct AsciiSprite : public IComponent {
-    std::vector<char> sprite;
-    size_t width;
-    size_t heigth;
+    struct AsciiSprite : public IComponent {
+        std::vector<char> sprite;
+        size_t width;
+        size_t heigth;
 
-    ComponentType getType() const override
-        {return ComponentType::ASCII_SPRITE;}
-};
+        ComponentType getType() const override
+        {
+            return ComponentType::ASCII_SPRITE;
+        }
+    };
 
 }
 
