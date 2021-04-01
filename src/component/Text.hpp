@@ -17,11 +17,6 @@ namespace component {
 
     struct Text : public IComponent {
         std::string text;
-
-        ComponentType getType() const override
-        {
-            return ComponentType::TEXT;
-        }
     };
 
 }

@@ -9,18 +9,23 @@
 #define SOUND_HPP_
 
 #include "IComponent.hpp"
+#include <vector>
+#include <cstdint>
+#include <memory>
 
 namespace arcade {
 
 namespace component {
 
     struct Sound : public IComponent {
-        std::string path;
+        using Channel = std::vector<std::int16_t>;
 
-        ComponentType getType() const override
-        {
-            return ComponentType::SOUND;
-        }
+        std::shared_ptr<std::vector<Channel>> channels;
+        std::uint32_t sampleRate;
+        float currentTime;
+        float volume;
+        bool loop;
+        bool play;
     };
 
 }

@@ -26,11 +26,6 @@ namespace component {
         std::vector<Color> pixels;
         size_t width;
         size_t height;
-
-        ComponentType getType() const override
-        {
-            return ComponentType::SPRITE;
-        }
     };
 
 }

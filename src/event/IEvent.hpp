@@ -14,8 +14,7 @@ namespace event {
 
     class IEvent {
     public:
-        IEvent() = default;
-        ~IEvent() = default;
+        virtual ~IEvent() = default;
 
     protected:
     private:

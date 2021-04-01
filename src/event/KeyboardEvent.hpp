@@ -86,6 +86,7 @@ namespace event {
 
     struct KeyboardEvent : public IEvent {
         Key key;
+        enum {PRESSED, DOWN, RELEASED} action;
     };
 
 }

@@ -22,6 +22,7 @@ namespace event {
             MOUSE_SECONDARY,
             MOUSE_AUXILIARY,
         } button;
+        enum {PRESSED, DOWN, RELEASED} action;
     };
 
 }

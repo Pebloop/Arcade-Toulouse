@@ -10,20 +10,16 @@
 
 #include "IComponent.hpp"
 #include <vector>
+#include <memory>
 
 namespace arcade {
 
 namespace component {
 
     struct AsciiSprite : public IComponent {
-        std::vector<char> sprite;
+        std::shared_ptr<std::vector<char>> sprite;
         size_t width;
-        size_t heigth;
-
-        ComponentType getType() const override
-        {
-            return ComponentType::ASCII_SPRITE;
-        }
+        size_t height;
     };
 
 }

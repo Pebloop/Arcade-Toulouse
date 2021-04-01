@@ -14,15 +14,9 @@ namespace arcade {
 
 namespace component {
 
-    enum class ComponentType { SPRITE, TEXT, ASCII_SPRITE, SOUND, OTHER };
-
     class IComponent {
     public:
-        IComponent() = default;
-        ~IComponent() = default;
-
-        // get component type
-        virtual ComponentType getType() const = 0;
+        virtual ~IComponent() = default;
 
     protected:
     private:
