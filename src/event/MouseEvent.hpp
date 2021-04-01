@@ -14,15 +14,15 @@ namespace arcade {
 
 namespace event {
 
-struct MouseEvent : public IEvent {
-    int x;
-    int y;
-    enum {
-        MOUSE_PRIMARY,
-        MOUSE_SECONDARY,
-        MOUSE_AUXILIARY,
-    } button;
-};
+    struct MouseEvent : public IEvent {
+        int x;
+        int y;
+        enum {
+            MOUSE_PRIMARY,
+            MOUSE_SECONDARY,
+            MOUSE_AUXILIARY,
+        } button;
+    };
 
 }
 

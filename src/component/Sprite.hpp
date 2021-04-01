@@ -8,8 +8,8 @@
 #ifndef SPRITE_HPP_
 #define SPRITE_HPP_
 
-#include <vector>
 #include "IComponent.hpp"
+#include <vector>
 
 struct Color {
     char a;
@@ -22,14 +22,16 @@ namespace arcade {
 
 namespace component {
 
-struct Sprite : public IComponent {
-    std::vector<Color> pixels;
-    size_t width;
-    size_t height;
-    
-    ComponentType getType() const override
-        {return ComponentType::SPRITE;}
-};
+    struct Sprite : public IComponent {
+        std::vector<Color> pixels;
+        size_t width;
+        size_t height;
+
+        ComponentType getType() const override
+        {
+            return ComponentType::SPRITE;
+        }
+    };
 
 }
 

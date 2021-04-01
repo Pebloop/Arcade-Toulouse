@@ -14,10 +14,12 @@ namespace arcade {
 
 namespace component {
 
-struct AsciiSprite : public IComponent {
-    ComponentType getType() const override
-        {return ComponentType::ASCII_SPRITE;}
-};
+    struct AsciiSprite : public IComponent {
+        ComponentType getType() const override
+        {
+            return ComponentType::ASCII_SPRITE;
+        }
+    };
 
 }
 

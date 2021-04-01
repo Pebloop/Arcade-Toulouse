@@ -12,14 +12,14 @@ namespace arcade {
 
 namespace event {
 
-class IEvent {
-public:
-    IEvent() = default;
-    ~IEvent() = default;
+    class IEvent {
+    public:
+        IEvent() = default;
+        ~IEvent() = default;
 
-protected:
-private:
-};
+    protected:
+    private:
+    };
 
 }
 

@@ -14,15 +14,9 @@ namespace arcade {
 
 namespace component {
 
-enum class ComponentType {
-    SPRITE,
-    TEXT,
-    ASCII_SPRITE,
-    SOUND,
-    OTHER
-};
+    enum class ComponentType { SPRITE, TEXT, ASCII_SPRITE, SOUND, OTHER };
 
-class IComponent {
+    class IComponent {
     public:
         IComponent() = default;
         ~IComponent() = default;
@@ -32,7 +26,7 @@ class IComponent {
 
     protected:
     private:
-};
+    };
 
 }
 
