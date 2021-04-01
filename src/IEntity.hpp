@@ -24,11 +24,6 @@ public:
     // set entity position
     virtual void setPosition(Vector3 pos) = 0;
 
-    // set entity depth
-    virtual void setDepth(float depth) = 0;
-    // get entity depth
-    virtual float getDepth() const = 0;
-
     // add component to entity
     virtual void addComponent(component::IComponent* component) = 0;
     // remove component from entity

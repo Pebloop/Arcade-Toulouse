@@ -29,26 +29,93 @@ namespace arcade {
 
     interface IScene {
         + pushEvent(event)
+        + exit()
+        + newEntity(name)
+        + addEntity(entity)
+        + getEntity(name)
+        + getEntity(index)
+        + removeEntity(name)
+        + addScore(float score)
+        + forEach(function)
     }
 
-    interface IEvent {
+    namespace event {
+
+        interface IEvent {
+
+        }
+
+        class KeyBoardEvent {
+            + Key key
+        }
+
+        class MouseEvent {
+            + x
+            + y
+            + button
+        }
+
+        KeyBoardEvent -up-|> IEvent
+        MouseEvent -up-|> IEvent
 
     }
 
-    class KeyBoardEvent {
-        + Key key
+    namespace component {
+        interface IComponent {
+            getType()
+        }
+
+        class Sprite {
+            + pixels
+            + width
+            + heigth
+        }
+
+        class Sound {
+            + path
+        }
+
+        class AsciiSprite {
+            + pixels
+            + width
+            + heigth
+        }
+
+        class Text {
+            + text
+        }
+
+        Sprite --|> IComponent
+        Sound --|> IComponent
+        AsciiSprite --|> IComponent
+        Text --|> IComponent
+
     }
 
-    class MouseEvent {
+    class Vector3 {
         + x
         + y
-        + button
+        + z
     }
 
-    arcade::KeyBoardEvent -up-|> arcade::IEvent
-    arcade::MouseEvent -up-|> arcade::IEvent
+    interface IEntity {
+        + getPosition()
+        + setPosition(pos)
+        + addComponent(component)
+        + removeComponent(index)
+        + removeComponent(type)
+        + getComponent(index)
+        + getComponent(type)
+        + forEach(function)
+    }
 
-    arcade::IEvent --> arcade::lib::IGame
+    Vector3 --* IEntity
+
+    arcade::component::IComponent --* arcade::IEntity
+    arcade::IEntity --* arcade::IScene
+
+    arcade::event::IEvent <-- arcade::lib::IGraphic
+    arcade::event::IEvent --> arcade::lib::IGame
 
     arcade::lib::ILibrary -up-* arcade::Core
     arcade::lib::IGraphic -up-|> arcade::lib::ILibrary
@@ -56,5 +123,14 @@ namespace arcade {
     arcade::IScene -up-* arcade::Core
 
 }
+
+class Color {
+    + a
+    + r
+    + g
+    + b
+}
+
+Color --* arcade::component::Sprite
 
 @enduml
