@@ -9,8 +9,8 @@
 #define IGAME_HPP_
 
 #include "ILibrary.hpp"
-#include "event/MouseEvent.hpp"
 #include "event/KeyboardEvent.hpp"
+#include "event/MouseEvent.hpp"
 
 namespace arcade {
 
