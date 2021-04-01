@@ -9,7 +9,7 @@
 #define ISCENE_HPP_
 
 #include "IEntity.hpp"
-#include "IEvent.hpp"
+#include "event/IEvent.hpp"
 #include <string>
 
 namespace arcade {
