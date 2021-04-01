@@ -11,15 +11,41 @@ Liste et description des fichiers:
 
 ## Interfaces des librairies
 
-* **IGame.hpp** : Interface qui définit les libraries de jeu
-    * **void init(Scene &scene)** : lancé une fois au début du jeu.
-    * **void update(Scene &scene, float dt)** : répété tout le long du jeu. La durée qui sépare 2 updates est définie dans *dt*.
-    * **void end(Scene &scene)** : lancé une fois à la fin du jeu.
+* **ILibrary** : Interface qui définit les librairies
+    * **void init(Scene &scene)** : lancé une fois lors de l'activation de la librairie.
+    * **void update(Scene &scene, float dt)** : répété tout le long de son utilisation. La durée qui sépare 2 updates est définie dans *dt*.
+    * **void end(Scene &scene)** : lancé une fois à la fin de l'utilisation de la librairie.
 
-* **IGraphic.hpp** : Interface qui définit les libraries graphiques
-    * **void init(Scene &scene)** : lancé une fois à l'activation de la lib graphique.
-    * **void update(Scene &scene, float dt)** : répété tout le long du jeu. La durée qui sépare 2 updates est définie dans *dt*.
-    * **void end(Scene &scene)** : lancé une fois à la fermetur de la lib graphique.
+* **IGame.hpp** : Interface qui définit les libraries de jeu.
+
+    * <details>
+      <summary>Elle hérite des méthodes de **ILibrary** :</summary>
+
+        * **void init(Scene &scene)** : lancé une fois au début du jeu.
+        * **void update(Scene &scene, float dt)** : répété tout le long du jeu. La durée qui sépare 2 updates est définie dans *dt*.
+        * **void end(Scene &scene)** : lancé une fois à la fin du jeu.
+
+     </details>
+
+    * Elle implémente également les méthodes suivantes :
+
+        * **void onKeyDown(const Key &key)** : callback d'event de touche clavier préssé.
+        * **void onKeyPressed(const Key &key)** : callback d'event de touche clavier appuyé.
+        * **void onKeyReleased(const Key &key)** : callback d'event de touche clavier relaché.
+        * **void onMouseDown(const MouseEvent &mouse)** : callback d'event de bouton de souris préssé.
+        * **void onMousePressed(const MouseEvent &mouse)** : callback d'event de bouton de souris appuyé.
+        * **void onMouseReleased(const MouseEvent &mouse)** : callback d'event de bouton de souris relàché.
+
+
+* **IGraphic.hpp** : Interface qui définit les libraries graphiques.
+
+    * <details>
+      <summary>Elle hérite des méthodes de **ILibrary** :</summary>
+
+         * **void init(Scene &scene)** : lancé une fois à l'activation de la lib graphique.
+         * **void update(Scene &scene, float dt)** : répété tout le long du jeu. La durée qui sépare 2 updates est définie dans *dt*.
+         * **void end(Scene &scene)** : lancé une fois à la fermetur de la lib graphique.
+    </details>
 
 ## Interfaces autre
 

@@ -48,6 +48,20 @@ void library_delete(void *pacman)
 
 Certains champs sont facultatifs mais il serait bon d'au moins les mettre à 0 pour éviter les erreurs à ceux qui les utilisent (merci).
 
+### **IGame**
+
+**IGame** implémente 6 méthodes appelés lors d'évenements :
+* `onKeyDown(const Key &key)` : on est en train d'appuyer sur une touche clavier (la touche *key*).
+* `onKeyPressed(const Key &key)` : on vient d'appuyer sur une touche clavier (la touche *key*).
+* `onKeyReleased(const Key &key)` : on vient de relacher une touche clavier (la touche *key*).
+
+
+* `onMouseDown(const MouseEvent &mouse)` : on est en train d'appuyer sur un bouton de la souris (la structure *mouse* contient la position de la souris et le bouton préssé).
+* `onMousePressed(const MouseEvent &mouse)` : on vient d'appuyer sur un bouton de la souris (la structure *mouse* contient la position de la souris et le bouton préssé).
+* `onMouseReleased(const MouseEvent &mouse)` : on vient de relacher un bouton de la souris (la structure *mouse* contient la position de la souris et le bouton relàché).
+
+Ceux sont des call back. Cela signifie qu'elle sont appelée à chaques fois que l'évenement a lieu, par le core. Elle est implémenté par **IGame** qui défini qu'elles actions ont lieu lorsque cette évenement est appelé.
+
 ### **keyboard.hpp**
 
 **keyboard.hpp** est un fichier qui contient une énumération **`Key`** qui définie les touches du clavier. Elle est utilisé pour les événement du clavier.
