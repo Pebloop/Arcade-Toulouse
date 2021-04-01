@@ -1,6 +1,6 @@
 > [retour](https://github.com/TempoDev/Arcade-Toulouse)
 # Comment proposer des idées / Débattre ?
-Une proposition peut être faite en ouvrant une issue github, qui sera ensuite ajoutée directement au projet et créera une discution.
+Une proposition peut être faite en ouvrant une issue github, qui sera ensuite ajoutée directement au projet et créera une discussion.
 
 Un exemple d'issue est disponible [ici](https://github.com/TempoDev/Arcade-Toulouse/issues/1)
 
@@ -17,7 +17,7 @@ Vous pouvez créer de nouvelles dicussions et participer aux débats.
     * Ideas : pour proposer des idées
     * Questions : pour poser des questions
 2. Les différentes conversations
-3. Créer une nouvelles discussion
+3. Créer une nouvelle discussion
 > /!\ Vous pouvez créer de nouvelles conversations dès que vous voulez aborder un sujet ou poser une question. Néanmoins merci d'éviter de dupliquer des conversations, au risque de noyer d'autres conversations importantes.
 
 ## page de discussion
