@@ -21,12 +21,12 @@ namespace arcade {
 
     }
 
-    class Scene
+    interface IScene
 
     arcade::lib::ILibrary -up-* arcade::Core
     arcade::lib::IGraphic -up-|> arcade::lib::ILibrary
     arcade::lib::IGame -up-|> arcade::lib::ILibrary
-    arcade::Scene -up-* arcade::Core
+    arcade::IScene -up-* arcade::Core
 
 }
 

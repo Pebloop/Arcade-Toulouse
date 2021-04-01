@@ -9,4 +9,56 @@ L'architecture choisie de l'arcade est la suivante :
 * L'interface **ILibrary** représente les librairies (les *.so).
 * L'interface **IGame** représente les libs de jeu.
 * L'interface **IGraphic** représente les libs graphiques.
-* La classe **Scene** contient la scene  avec lequels interagissent le jeu et la lib graphiques.
+* L'interface **IScene** contient la scene  avec lequels interagissent le jeu et la lib graphiques.
+
+## Détails
+
+### **ILibrary**
+
+**ILibrary** Contient 3 méthodes :
+* `init` qui se lance à "l'activation" de la librairie.
+* `update` qui s'execute en boucle tant que la lib est active
+* `end` qui s'execute à la fin de l'utilisation de la lib (lorsque celle-ci est désactivée).
+
+### **api.h**
+
+**api.h** est un fichier qui relie le core et les librairies. Elle contient 3 fonctions qui doivent être *appelé* par le *core* et **implémentés** par la **librairie**:
+
+* `library_create` qui retourne une **instance** d'une classe qui hérite de `IGame` ou `IGraphic`.
+
+```cpp
+void *library_create()
+{
+    return new PacMan();
+}
+```
+
+* `library_delete` qui efface **l'instance** créée par `library_create`.
+```cpp
+void library_delete(void *pacman)
+{
+    delete static_cast<PacMan>(pacman);
+}
+```
+* `library_get_data` qui renvoie une structure `library_info_t` contenant des informations sur la librairie :
+    * `enum type` [GAME|GRAPHIC] : défini le type de lib
+    * `name` : le nom de la librairie
+    * *[facultatif]* `date` : la date de la librairie 
+    * *[facultatif]* `desc` : une description de la librairie
+
+Certains champs sont facultatifs mais il serait bon d'au moins les mettre à 0 pour éviter les erreurs à ceux qui les utilisent (merci).
+
+### **keyboard.hpp**
+
+**keyboard.hpp** est un fichier qui contient une énumération **`Key`** qui définie les touches du clavier. Elle est utilisé pour les événement du clavier.
+
+### **Mouse.hpp**
+
+**Mouse.hpp** est un fichier qui contient une structure **`MouseEvent`** qui définie un évenement souris.
+Elle contient :
+* `int x` : la position de la souris sur la longueur.
+* `int y` : la position de la souris sur la hauter.
+* `enum button` : le boutton concerné par l'événement :
+    * `MOUSE_PRIMARY` : clic gauche
+    * `MOUSE_SECONDARY` : clic droit
+    * `MOUSE_AUXILIARY` : clic central

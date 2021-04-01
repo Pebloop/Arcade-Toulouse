@@ -9,7 +9,7 @@ Liste et description des fichiers:
     * **void \*library_create()** : renvoie la lib au core.
     * **void library_delete(void \*library)** : supprime la lib.
 
-## Interfaces
+## Interfaces des librairies
 
 * **IGame.hpp** : Interface qui définit les libraries de jeu
     * **void init(Scene &scene)** : lancé une fois au début du jeu.
@@ -21,6 +21,11 @@ Liste et description des fichiers:
     * **void update(Scene &scene, float dt)** : répété tout le long du jeu. La durée qui sépare 2 updates est définie dans *dt*.
     * **void end(Scene &scene)** : lancé une fois à la fermetur de la lib graphique.
 
-## Classes
+## Interfaces autre
 
-* **Scene.hpp** : Classe qui définit une scène de jeu.
+* **IScene.hpp** : interface qui définit une scène de jeu.
+
+## Autre
+
+* **keyboard.hpp** : énumération des touches du clavier.
+* **Mouse.hpp** : structure qui contient un événement de souris.
