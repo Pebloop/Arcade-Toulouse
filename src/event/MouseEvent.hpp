@@ -12,6 +12,8 @@
 
 namespace arcade {
 
+namespace event {
+
 struct MouseEvent : public IEvent {
     int x;
     int y;
@@ -21,6 +23,8 @@ struct MouseEvent : public IEvent {
         MOUSE_AUXILIARY,
     } button;
 };
+
+}
 
 }
 

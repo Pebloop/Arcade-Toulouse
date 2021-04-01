@@ -8,6 +8,10 @@
 #ifndef IEVENT_HPP_
 #define IEVENT_HPP_
 
+namespace arcade {
+
+namespace event {
+
 class IEvent {
 public:
     IEvent() = default;
@@ -16,5 +20,9 @@ public:
 protected:
 private:
 };
+
+}
+
+}
 
 #endif /* !IEVENT_HPP_ */

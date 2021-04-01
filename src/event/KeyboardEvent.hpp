@@ -12,6 +12,8 @@
 
 namespace arcade {
 
+namespace event {
+
 enum class Key {
     KEY_ESCAPE,
     KEY_BACKSPACE,
@@ -86,6 +88,9 @@ enum class Key {
 struct KeyboardEvent : public IEvent {
     Key key;
 };
+
+}
+
 
 }
 

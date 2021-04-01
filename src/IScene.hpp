@@ -9,6 +9,8 @@
 #define ISCENE_HPP_
 
 #include "IEvent.hpp"
+#include "IEntity.hpp"
+#include <string>
 
 namespace arcade {
 
@@ -18,6 +20,14 @@ public:
 
     virtual void exit() const = 0;
     virtual void pushEvent(IEvent& event) = 0;
+
+    virtual IEntity &newEntity(std::string name) = 0;
+    virtual void addEntity(IEntity entity) = 0;
+    virtual IEntity &getEntity(std::string name) = 0;
+    virtual IEntity &getEntity(size_t index) = 0;
+    virtual void removeEntity(std::string name) = 0;
+
+    virtual void forEach(std::function<void(IEntity &)>) const = 0;
 
 protected:
 private:
