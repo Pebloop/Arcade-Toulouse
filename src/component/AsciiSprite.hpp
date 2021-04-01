@@ -9,8 +9,8 @@
 #define ASCIISPRITE_HPP_
 
 #include "IComponent.hpp"
-#include <vector>
 #include <memory>
+#include <vector>
 
 namespace arcade {
 

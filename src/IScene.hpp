@@ -20,7 +20,7 @@ public:
     virtual ~IScene() = default;
 
     virtual void exit() const = 0;
-    virtual void pushEvent(const event::IEvent &event) = 0;
+    virtual void pushEvent(const event::IEvent& event) = 0;
 
     virtual IEntity& newEntity(std::string name) = 0;
     virtual IEntity& newEntity() = 0;

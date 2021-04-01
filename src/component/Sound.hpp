@@ -9,9 +9,9 @@
 #define SOUND_HPP_
 
 #include "IComponent.hpp"
-#include <vector>
 #include <cstdint>
 #include <memory>
+#include <vector>
 
 namespace arcade {
 
