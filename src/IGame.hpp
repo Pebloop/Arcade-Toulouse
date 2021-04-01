@@ -9,8 +9,8 @@
 #define IGAME_HPP_
 
 #include "ILibrary.hpp"
-#include "keyboard.hpp"
 #include "Mouse.hpp"
+#include "keyboard.hpp"
 
 namespace arcade {
 
@@ -20,12 +20,12 @@ namespace lib {
     public:
         virtual ~IGame() = default;
 
-    virtual void onKeyDown(const Key &key) = 0;
-    virtual void onKeyPressed(const Key &key) = 0;
-    virtual void onKeyReleased(const Key &key) = 0;
-    virtual void onMouseDown(const MouseEvent &mouse) = 0;
-    virtual void onMousePressed(const MouseEvent &mouse) = 0;
-    virtual void onMouseReleased(const MouseEvent &mouse) = 0;
+        virtual void onKeyDown(const Key& key) = 0;
+        virtual void onKeyPressed(const Key& key) = 0;
+        virtual void onKeyReleased(const Key& key) = 0;
+        virtual void onMouseDown(const MouseEvent& mouse) = 0;
+        virtual void onMousePressed(const MouseEvent& mouse) = 0;
+        virtual void onMouseReleased(const MouseEvent& mouse) = 0;
 
     protected:
     private:
