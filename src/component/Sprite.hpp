@@ -9,8 +9,8 @@
 #define SPRITE_HPP_
 
 #include "IComponent.hpp"
-#include <vector>
 #include <memory>
+#include <vector>
 
 struct Color {
     char a;
