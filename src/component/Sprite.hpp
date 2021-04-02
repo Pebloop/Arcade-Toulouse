@@ -23,7 +23,7 @@ namespace arcade {
 namespace component {
 
     struct Sprite : public IComponent {
-        std::vector<Color> pixels;
+        std::shared_ptr<std::vector<Color>> pixels;
         size_t width;
         size_t height;
     };
