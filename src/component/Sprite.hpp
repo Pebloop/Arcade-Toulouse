@@ -10,6 +10,7 @@
 
 #include "IComponent.hpp"
 #include <vector>
+#include <memory>
 
 struct Color {
     char a;
