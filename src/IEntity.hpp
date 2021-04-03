@@ -24,8 +24,7 @@ public:
     virtual void removeComponent(const component::IComponent& component) = 0;
 
     // for each components from entity, execute fun
-    virtual void forEach(
-        std::function<void(component::IComponent&)> fun) const = 0;
+    virtual void forEach(std::function<void(component::IComponent&)> fun) = 0;
 
 protected:
 private:

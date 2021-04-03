@@ -33,7 +33,7 @@ public:
 
     virtual void addScore(float score) = 0;
 
-    virtual void forEach(std::function<void(IEntity&)>) const = 0;
+    virtual void forEach(std::function<void(IEntity&)>) = 0;
 
 protected:
 private:

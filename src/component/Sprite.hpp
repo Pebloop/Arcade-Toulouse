@@ -12,14 +12,13 @@
 #include <memory>
 #include <vector>
 
-struct Color {
-    char a;
-    char r;
-    char g;
-    char b;
-};
-
 namespace arcade {
+struct Color {
+    unsigned char a;
+    unsigned char r;
+    unsigned char g;
+    unsigned char b;
+};
 
 namespace component {
 

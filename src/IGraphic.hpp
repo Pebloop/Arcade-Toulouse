@@ -16,7 +16,7 @@ namespace lib {
 
     class IGraphic : public ILibrary {
     public:
-        virtual ~IGraphic = default;
+        virtual ~IGraphic() = default;
 
         virtual bool quitRequested() const = 0;
 
