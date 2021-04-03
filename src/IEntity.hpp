@@ -25,6 +25,8 @@ public:
 
     // for each components from entity, execute fun
     virtual void forEach(std::function<void(component::IComponent&)> fun) = 0;
+    
+    virtual int getId() = 0;
 
 protected:
 private:
