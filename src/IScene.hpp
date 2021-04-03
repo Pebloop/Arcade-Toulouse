@@ -10,9 +10,9 @@
 
 #include "IEntity.hpp"
 #include "event/IEvent.hpp"
+#include <functional>
 #include <string>
 #include <vector>
-#include <functional>
 
 namespace arcade {
 
@@ -25,7 +25,9 @@ public:
 
     virtual IEntity& newEntity(std::string name) = 0;
     virtual IEntity& newEntity() = 0;
-    virtual std::vector<std::reference_wrapper<IEntity>> getEntity(const std::string& name) = 0;
+    virtual std::vector<std::reference_wrapper<IEntity>> getEntity(
+        const std::string& name)
+        = 0;
     virtual void removeEntity(const std::string& name) = 0;
     virtual void removeEntity(const IEntity& entity) = 0;
 
