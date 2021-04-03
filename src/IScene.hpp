@@ -24,13 +24,15 @@ public:
 
     virtual IEntity& newEntity(std::string name) = 0;
     virtual IEntity& newEntity() = 0;
-    virtual std::vector<IEntity&> getEntity(const std::string& name) = 0;
+    virtual std::vector<std::reference_wrapper<IEntity>> getEntity(
+        const std::string& name)
+        = 0;
     virtual void removeEntity(const std::string& name) = 0;
     virtual void removeEntity(const IEntity& entity) = 0;
 
     virtual void addScore(float score) = 0;
 
-    virtual void forEach(std::function<void(IEntity&)>) const = 0;
+    virtual void forEach(std::function<void(IEntity&)>) = 0;
 
 protected:
 private:
