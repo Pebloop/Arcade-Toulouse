@@ -22,10 +22,9 @@ struct Color {
 
 namespace component {
 
-    struct Sprite : public IComponent {
-        std::shared_ptr<std::vector<Color>> pixels;
-        size_t width;
-        size_t height;
+    class ISprite : public IComponent {
+        virtual ~ISprite() = default;
+        virtual void draw() = 0;
     };
 
 }
