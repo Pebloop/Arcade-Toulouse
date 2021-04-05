@@ -46,13 +46,13 @@ void *library_create()
 ```cpp
 void library_delete(void *pacman)
 {
-    delete static_cast<PacMan>(pacman);
+    delete static_cast<PacMan *>(pacman);
 }
 ```
 * `library_get_data` qui renvoie une structure `library_info_t` contenant des informations sur la librairie :
     * `enum type` [GAME|GRAPHIC] : défini le type de lib
     * `name` : le nom de la librairie
-    * *[facultatif]* `date` : la date de la librairie 
+    * *[facultatif]* `date` : la date de la librairie
     * *[facultatif]* `desc` : une description de la librairie
 
 Certains champs sont facultatifs mais il serait bon d'au moins les mettre à 0 pour éviter les erreurs à ceux qui les utilisent (merci).
