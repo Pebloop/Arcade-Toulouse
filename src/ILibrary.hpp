@@ -20,28 +20,9 @@ namespace lib {
     class ILibrary {
     public:
         virtual ~ILibrary() = default;
-
-        /**
-         * @brief Initialise the library
-         *
-         * @param scene
-         */
-        virtual void init(IScene& scene) = 0;
-
-        /**
-         * @brief Update the library logic
-         *
-         * @param scene
-         * @param dt Time elapsed since the last update (in seconds)
-         */
-        virtual void update(IScene& scene, float dt) = 0;
-
-        /**
-         * @brief Cleanup all resources associated with this library instance
-         *
-         * @param scene
-         */
-        virtual void end(IScene& scene) = 0;
+        virtual void initMyBrain(IScene& scene) = 0;
+        virtual void updateBullying(IScene& scene, float dt) = 0;
+        virtual void endMyLife(IScene& scene) = 0;
     };
 
 }
