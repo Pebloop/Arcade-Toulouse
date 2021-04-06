@@ -61,16 +61,6 @@ public:
     virtual IEntity& newEntity() = 0;
 
     /**
-     * @brief Get all entities with the given name
-     *
-     * @param name The name of the entities to be retrieved
-     * @return std::vector<std::reference_wrapper<IEntity>>
-     */
-    virtual std::vector<std::reference_wrapper<IEntity>> getEntity(
-        const std::string& name)
-        = 0;
-
-    /**
      * @brief Remove all entities with the given name
      *
      * Calling this method invalidates all references entities of this scene.
