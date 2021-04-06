@@ -103,7 +103,19 @@ public:
      */
     virtual void forEach(std::function<void(IEntity&)>) = 0;
 
+    /**
+     * @brief Set the preferred window size (in game units)
+     *
+     * @param x
+     * @param y
+     */
     virtual void setWindowSize(int x, int y) = 0;
+
+    /**
+     * @brief Get the preferred window size (in game units)
+     *
+     * @return math::Vector2
+     */
     virtual math::Vector2 getWindowSize() const = 0;
 };
 
