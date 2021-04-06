@@ -9,8 +9,8 @@
 #define ISCENE_HPP_
 
 #include "IEntity.hpp"
-#include "event/IEvent.hpp"
 #include "Vector2.hpp"
+#include "event/IEvent.hpp"
 #include <functional>
 #include <string>
 #include <vector>
@@ -38,6 +38,7 @@ public:
 
     virtual void setWindowSize(int x, int y) = 0;
     virtual math::Vector2 getWindowSize() const = 0;
+
 protected:
 private:
 };
