@@ -37,6 +37,7 @@ public:
 
     virtual void setWindowSize(int x, int y) = 0;
     virtual Vector2 getWindowSize() const = 0;
+
 protected:
 private:
 };
