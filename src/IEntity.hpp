@@ -21,12 +21,16 @@ public:
     /**
      * @brief Add a component to this entity
      *
+     * Calling this method invalidates all references to any component.
+     *
      * @param component
      */
     virtual void addComponent(const component::IComponent& component) = 0;
 
     /**
      * @brief Remove a component from this entity
+     *
+     * Calling this method invalidates all references to any component.
      *
      * @param component
      */
