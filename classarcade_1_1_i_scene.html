@@ -108,6 +108,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a8702bffd4b59a6a3785750c9ae6fb4fa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarcade_1_1_i_scene.html#a8702bffd4b59a6a3785750c9ae6fb4fa">forEach</a> (std::function&lt; void(<a class="el" href="classarcade_1_1_i_entity.html">IEntity</a> &amp;)&gt;)=0</td></tr>
 <tr class="memdesc:a8702bffd4b59a6a3785750c9ae6fb4fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over all entities of this scene.  <a href="classarcade_1_1_i_scene.html#a8702bffd4b59a6a3785750c9ae6fb4fa">More...</a><br /></td></tr>
 <tr class="separator:a8702bffd4b59a6a3785750c9ae6fb4fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a904c4fb1f13d13c044202721746f3581"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarcade_1_1_i_scene.html#a904c4fb1f13d13c044202721746f3581">forEach</a> (std::function&lt; void(<a class="el" href="classarcade_1_1_i_entity.html">IEntity</a> &amp;)&gt;, const std::string &amp;name)=0</td></tr>
+<tr class="memdesc:a904c4fb1f13d13c044202721746f3581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterate over all entities of this scene named name.  <a href="classarcade_1_1_i_scene.html#a904c4fb1f13d13c044202721746f3581">More...</a><br /></td></tr>
+<tr class="separator:a904c4fb1f13d13c044202721746f3581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae9f64a274b9187410cb8bd354bff228"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classarcade_1_1_i_scene.html#aae9f64a274b9187410cb8bd354bff228">setWindowSize</a> (int x, int y)=0</td></tr>
 <tr class="memdesc:aae9f64a274b9187410cb8bd354bff228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the preferred window size (in game units)  <a href="classarcade_1_1_i_scene.html#aae9f64a274b9187410cb8bd354bff228">More...</a><br /></td></tr>
 <tr class="separator:aae9f64a274b9187410cb8bd354bff228"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,7 +157,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div>
 </div>
 <a id="a8702bffd4b59a6a3785750c9ae6fb4fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8702bffd4b59a6a3785750c9ae6fb4fa">&#9670;&nbsp;</a></span>forEach()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8702bffd4b59a6a3785750c9ae6fb4fa">&#9670;&nbsp;</a></span>forEach() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -178,6 +181,45 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 </div><div class="memdoc">
 
 <p>Iterate over all entities of this scene. </p>
+<p>No entities should be added or removed in the callback function, as this could invalidate any internal iterator or entity reference. </p>
+
+</div>
+</div>
+<a id="a904c4fb1f13d13c044202721746f3581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a904c4fb1f13d13c044202721746f3581">&#9670;&nbsp;</a></span>forEach() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void arcade::IScene::forEach </td>
+          <td>(</td>
+          <td class="paramtype">std::function&lt; void(<a class="el" href="classarcade_1_1_i_entity.html">IEntity</a> &amp;)&gt;&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterate over all entities of this scene named name. </p>
 <p>No entities should be added or removed in the callback function, as this could invalidate any internal iterator or entity reference. </p>
 
 </div>

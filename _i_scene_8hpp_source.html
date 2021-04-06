@@ -111,15 +111,17 @@ $(function() {
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a7c00d4a2377d72296bf86e59f02d5be0">addScore</a>(<span class="keywordtype">float</span> score) = 0;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a8702bffd4b59a6a3785750c9ae6fb4fa">forEach</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code" href="classarcade_1_1_i_entity.html">IEntity</a>&amp;)&gt;) = 0;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#aae9f64a274b9187410cb8bd354bff228">setWindowSize</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) = 0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a8702bffd4b59a6a3785750c9ae6fb4fa">forEach</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code" href="classarcade_1_1_i_entity.html">IEntity</a>&amp;)&gt;, <span class="keyword">const</span> std::string&amp; name) = 0;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structarcade_1_1math_1_1_vector2.html">math::Vector2</a> <a class="code" href="classarcade_1_1_i_scene.html#a8e113b77896071c43d632e86a686b3dc">getWindowSize</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#aae9f64a274b9187410cb8bd354bff228">setWindowSize</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) = 0;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ISCENE_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structarcade_1_1math_1_1_vector2.html">math::Vector2</a> <a class="code" href="classarcade_1_1_i_scene.html#a8e113b77896071c43d632e86a686b3dc">getWindowSize</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;};</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ISCENE_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassarcade_1_1_i_scene_html_a8e113b77896071c43d632e86a686b3dc"><div class="ttname"><a href="classarcade_1_1_i_scene.html#a8e113b77896071c43d632e86a686b3dc">arcade::IScene::getWindowSize</a></div><div class="ttdeci">virtual math::Vector2 getWindowSize() const =0</div><div class="ttdoc">Get the preferred window size (in game units)</div></div>
 <div class="ttc" id="aclassarcade_1_1_i_scene_html_aae9f64a274b9187410cb8bd354bff228"><div class="ttname"><a href="classarcade_1_1_i_scene.html#aae9f64a274b9187410cb8bd354bff228">arcade::IScene::setWindowSize</a></div><div class="ttdeci">virtual void setWindowSize(int x, int y)=0</div><div class="ttdoc">Set the preferred window size (in game units)</div></div>
