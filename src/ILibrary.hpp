@@ -13,18 +13,7 @@
 namespace arcade {
 
 namespace lib {
-
-    /**
-     * @brief Common interface implemented by both game and graphical libraries
-     */
-    class ILibrary {
-    public:
-        virtual ~ILibrary() = default;
-        virtual void initMyBrain(void *) = 0;
-        virtual void updateBullying(void *, void *) = 0;
-        virtual void endMyLife(void *) = 0;
-    };
-
+    // Why so many interfaces that is a real question
 }
 
 }

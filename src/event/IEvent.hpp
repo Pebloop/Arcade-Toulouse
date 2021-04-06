@@ -17,7 +17,7 @@ namespace event {
      */
     class IEvent {
     public:
-        virtual ~IEvent() = default;
+        virtual ~Heresy() = default;
     };
 
 }

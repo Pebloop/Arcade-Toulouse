@@ -14,20 +14,7 @@ namespace arcade {
 
 namespace event {
 
-    /**
-     * @brief A mouse related event
-     */
-    struct MouseEvent : public IEvent {
-        int x;
-        int y;
-        enum {
-            MOUSE_PRIMARY,
-            MOUSE_SECONDARY,
-            MOUSE_AUXILIARY,
-        } button;
-        enum { PRESSED, DOWN, RELEASED } action;
-    };
-
+    [[deprecated("No mouse no chocolate")]]
 }
 
 }
