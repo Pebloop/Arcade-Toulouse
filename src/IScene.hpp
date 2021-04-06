@@ -102,14 +102,15 @@ public:
      * could invalidate any internal iterator or entity reference.
      */
     virtual void forEach(std::function<void(IEntity&)>) = 0;
-    
+
     /**
      * @brief Iterate over all entities of this scene named name
      *
      * No entities should be added or removed in the callback function, as this
      * could invalidate any internal iterator or entity reference.
      */
-    virtual void forEach(std::function<void(IEntity&)>, const std::string& name) = 0;
+    virtual void forEach(std::function<void(IEntity&)>, const std::string& name)
+        = 0;
 
     /**
      * @brief Set the preferred window size (in game units)
