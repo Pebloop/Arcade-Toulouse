@@ -35,6 +35,8 @@ public:
 
     virtual void forEach(std::function<void(IEntity&)>) = 0;
 
+    virtual void setWindowSize(int x, int y) = 0;
+    virtual Vector2 getWindowSize() const = 0;
 protected:
 private:
 };
