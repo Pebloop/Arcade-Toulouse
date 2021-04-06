@@ -1,57 +1,82 @@
-> [retour](https://github.com/TempoDev/Arcade-Toulouse)
-# Sources
-Liste et description des fichiers: 
+# Arcade Toulouse
 
-## API
+Details about most interfaces can be found on their appropriate page. This page
+serves as a guide for proper usage and understanding of the API.
 
-* **api.h** : API, en C, qui relie les *libs* et le *core*. Elle contient 3 fonctions, ces dernières devant être *définies dans chacunes des libs* et *appelées par le core* :
-    * **void \*library_get_type()** : renvoie les métadatas de la lib.
-    * **void \*library_create()** : renvoie la lib au core.
-    * **void library_delete(void \*library)** : supprime la lib.
+## Invalid references
 
-## Interfaces des librairies
+Some methods, such as `IScene::newEntity`, `IScene::removeEntity`,
+`IEntity::addComponent` or `IEntity::removeComponent` cause some references to
+be "invalidated". Using a invalid reference leads to undefined behaviour. Here's
+a short explanation of what that implies.
 
-* **ILibrary** : Interface qui définit les librairies
-    * **void init(Scene &scene)** : lancé une fois lors de l'activation de la librairie.
-    * **void update(Scene &scene, float dt)** : répété tout le long de son utilisation. La durée qui sépare 2 updates est définie dans *dt*.
-    * **void end(Scene &scene)** : lancé une fois à la fin de l'utilisation de la librairie.
+Suppose you are creating some entities and storing references to them:
 
-* **IGame.hpp** : Interface qui définit les libraries de jeu.
+```cpp
+IEntity& player = scene.newEntity();
+IEntity& enemy = scene.newEntity();
+```
 
-    * <details>
-      <summary>Elle hérite des méthodes de **ILibrary** :</summary>
+Because `IScene::newEntity` invalidates all other entity references, when the
+`enemy` entity is created, the reference to `player` is invalidated.
 
-        * **void init(Scene &scene)** : lancé une fois au début du jeu.
-        * **void update(Scene &scene, float dt)** : répété tout le long du jeu. La durée qui sépare 2 updates est définie dans *dt*.
-        * **void end(Scene &scene)** : lancé une fois à la fin du jeu.
+That means the following code is invalid:
 
-     </details>
+```cpp
+IEntity& player = scene.newEntity();
+IEntity& enemy = scene.newEntity();
 
-    * Elle implémente également les méthodes suivantes :
+Transform xform;
+player.addComponent(xform); /* UNDEFINED BEHAVIOUR! */
+```
 
-        * **void onKeyDown(const Key &key)** : callback d'event de touche clavier préssé.
-        * **void onKeyPressed(const Key &key)** : callback d'event de touche clavier appuyé.
-        * **void onKeyReleased(const Key &key)** : callback d'event de touche clavier relaché.
-        * **void onMouseDown(const MouseEvent &mouse)** : callback d'event de bouton de souris préssé.
-        * **void onMousePressed(const MouseEvent &mouse)** : callback d'event de bouton de souris appuyé.
-        * **void onMouseReleased(const MouseEvent &mouse)** : callback d'event de bouton de souris relàché.
+Instead do something like the following example:
 
+```cpp
+IEntity& player = scene.newEntity();
 
-* **IGraphic.hpp** : Interface qui définit les libraries graphiques.
+Transform xform;
+player.addComponent(xform); /* OK! */
 
-    * <details>
-      <summary>Elle hérite des méthodes de **ILibrary** :</summary>
+IEntity& enemy = scene.newEntity();
 
-         * **void init(Scene &scene)** : lancé une fois à l'activation de la lib graphique.
-         * **void update(Scene &scene, float dt)** : répété tout le long du jeu. La durée qui sépare 2 updates est définie dans *dt*.
-         * **void end(Scene &scene)** : lancé une fois à la fermetur de la lib graphique.
-    </details>
+// here, "player" is invalid
+```
 
-## Interfaces autre
+The same applies to component references when attaching them to entities.
 
-* **IScene.hpp** : interface qui définit une scène de jeu.
+### Why though?
 
-## Autre
+The reason for this is rather simple: entities (and components) are likely to be
+stored in a continuous memory buffer that gets re-allocated or moved when
+mutating it.
 
-* **keyboard.hpp** : énumération des touches du clavier.
-* **Mouse.hpp** : structure qui contient un événement de souris.
+In other terms, if you have an `std::vector` like this:
+
+```cpp
+std::vector<Entity> entities;
+```
+
+And get a reference to an element:
+
+```cpp
+Entity& my_entity = entities[0];
+```
+
+Inserting a new element in the vector will invalidate the reference to
+`my_entity`, because the `std::vector` might need to re-allocate and move the
+values elsewhere in memory:
+
+```cpp
+std::vector<Entity> entities;
+
+entities.push_back(Entity("player"));
+Entity& player = entities[0];
+
+entities.push_back(Entity("enemy"));
+Entity& enemy = entities[1];
+
+// if the vector re-allocated memory, "player" now refers to an invalid location
+// there's no way to know if that was the case, so the reference is in an
+// invalid state and using it leads to undefined behaviour.
+```

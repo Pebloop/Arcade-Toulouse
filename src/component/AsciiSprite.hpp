@@ -16,6 +16,9 @@ namespace arcade {
 
 namespace component {
 
+    /**
+     * @brief Component representing a sprite made out of ASCII characters
+     */
     struct AsciiSprite : public IComponent {
         std::shared_ptr<std::vector<char>> sprite;
         size_t width;

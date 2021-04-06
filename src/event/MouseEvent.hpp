@@ -14,6 +14,9 @@ namespace arcade {
 
 namespace event {
 
+    /**
+     * @brief A mouse related event
+     */
     struct MouseEvent : public IEvent {
         int x;
         int y;

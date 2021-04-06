@@ -1,0 +1,21 @@
+name: Generate and publish documentation
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  doxygen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install doxygen
+        run: sudo apt install doxygen
+      - uses: actions/checkout@v2
+      - name: Generate documentation
+        run: doxygen ./Doxyfile
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./doxygen/html

@@ -18,16 +18,30 @@ class IEntity {
 public:
     virtual ~IEntity() = default;
 
-    // add component to entity
+    /**
+     * @brief Add a component to this entity
+     *
+     * Calling this method invalidates all references to any component.
+     *
+     * @param component
+     */
     virtual void addComponent(const component::IComponent& component) = 0;
-    // remove component from entity
+
+    /**
+     * @brief Remove a component from this entity
+     *
+     * Calling this method invalidates all references to any component.
+     *
+     * @param component
+     */
     virtual void removeComponent(const component::IComponent& component) = 0;
 
-    // for each components from entity, execute fun
+    /**
+     * @brief Run a predicate on each component attached to this entity
+     *
+     * @param fun
+     */
     virtual void forEach(std::function<void(component::IComponent&)> fun) = 0;
-
-protected:
-private:
 };
 
 }
