@@ -12,6 +12,7 @@ namespace arcade {
 
 namespace math {
 
+    // One of the only logical things of this repository
     struct Vector2 {
         float x;
         float y;
