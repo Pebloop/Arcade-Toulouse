@@ -17,7 +17,7 @@
 namespace arcade {
 
 /**
- * @brief An `IScene` is a container for the entities of the game.
+ * @brief A container for entities
  *
  * The `IScene` is also used to communicate events and exit requests.
  */

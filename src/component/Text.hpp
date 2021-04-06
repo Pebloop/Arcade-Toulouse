@@ -15,6 +15,9 @@ namespace arcade {
 
 namespace component {
 
+    /**
+     * @brief Component representing a text
+     */
     struct Text : public IComponent {
         std::string text;
     };

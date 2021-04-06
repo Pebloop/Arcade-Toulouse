@@ -20,11 +20,19 @@ namespace lib {
     public:
         virtual ~IGame() = default;
 
+        /**
+         * @brief Callback called for each keyboard event
+         *
+         * @param key Event data
+         */
         virtual void onKeyEvent(const event::KeyboardEvent& key) = 0;
-        virtual void onMouseEvent(const event::MouseEvent& mouse) = 0;
 
-    protected:
-    private:
+        /**
+         * @brief Callback called for each mouse event
+         *
+         * @param mouse Event data
+         */
+        virtual void onMouseEvent(const event::MouseEvent& mouse) = 0;
     };
 
 }

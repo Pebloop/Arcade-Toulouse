@@ -17,6 +17,9 @@ namespace arcade {
 
 namespace component {
 
+    /**
+     * @brief Component representing a sound effect
+     */
     struct Sound : public IComponent {
         using Channel = std::vector<std::int16_t>;
 

@@ -12,6 +12,9 @@ namespace arcade {
 
 namespace math {
 
+    /**
+     * @brief A three dimensional single-precision floating point vector
+     */
     struct Vector3 {
         float x;
         float y;

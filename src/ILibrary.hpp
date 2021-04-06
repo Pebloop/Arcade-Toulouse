@@ -14,6 +14,9 @@ namespace arcade {
 
 namespace lib {
 
+    /**
+     * @brief Common interface implemented by both game and graphical libraries
+     */
     class ILibrary {
     public:
         virtual ~ILibrary() = default;

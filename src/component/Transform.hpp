@@ -15,6 +15,12 @@ namespace arcade {
 
 namespace component {
 
+    /**
+     * @brief Component representing a 3D affine transformation
+     *
+     * The order in which the  transformations should be applied is translation
+     * THEN rotation THEN scale.
+     */
     struct Transform : public IComponent {
         math::Vector3 position;
         math::Vector3 rotation; // facultatif
