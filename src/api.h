@@ -8,7 +8,7 @@
 #ifndef API_H_
 #define API_H_
 
-#ifdef _WIN32
+#ifdef _WIN32 // windows is shit
 #define EXPORT __declspec(dllexport)
 #else
 #define EXPORT
@@ -24,25 +24,7 @@ extern "C" {
  * @brief A structure containing global metadata about a library
  */
 typedef struct library_info {
-    /**
-     * @brief The type of the library
-     */
-    enum { GAME, GRAPHIC } type;
-
-    /**
-     * @brief  The name of the library
-     */
-    const char* name;
-
-    /**
-     * @brief The creation or last update date of the library
-     */
-    time_t date;
-
-    /**
-     * @brief A description of the library
-     */
-    const char* desc;
+    void *data; // Is the same
 } library_info_t;
 
 /**
