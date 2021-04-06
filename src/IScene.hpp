@@ -9,6 +9,7 @@
 #define ISCENE_HPP_
 
 #include "IEntity.hpp"
+#include "Vector2.hpp"
 #include "event/IEvent.hpp"
 #include <functional>
 #include <string>
@@ -101,6 +102,9 @@ public:
      * could invalidate any internal iterator or entity reference.
      */
     virtual void forEach(std::function<void(IEntity&)>) = 0;
+
+    virtual void setWindowSize(int x, int y) = 0;
+    virtual math::Vector2 getWindowSize() const = 0;
 };
 
 }
