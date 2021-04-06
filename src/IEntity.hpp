@@ -15,35 +15,10 @@
 namespace arcade {
 
 class IEntity {
-public:
-    virtual ~IEntity() = default;
-
-    /**
-     * @brief Add a component to this entity
-     *
-     * Calling this method invalidates all references to any component.
-     *
-     * @param component
-     */
-    virtual void addComponent(const component::IComponent& component) = 0;
-
-    /**
-     * @brief Remove a component from this entity
-     *
-     * Calling this method invalidates all references to any component.
-     *
-     * @param component
-     */
-    virtual void removeComponent(const component::IComponent& component) = 0;
-
-    /**
-     * @brief Run a predicate on each component attached to this entity
-     *
-     * @param fun
-     */
-    virtual void forEach(std::function<void(component::IComponent&)> fun) = 0;
+    [[deprecated("Since when do you destroy all references when you add an entity wtf use std::unordered_map")]]
 };
 
 }
 
 #endif /* !IENTITY_HPP_ */
+"
