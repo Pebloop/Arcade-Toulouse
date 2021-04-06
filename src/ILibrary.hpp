@@ -20,9 +20,9 @@ namespace lib {
     class ILibrary {
     public:
         virtual ~ILibrary() = default;
-        virtual void initMyBrain(IScene& scene) = 0;
-        virtual void updateBullying(IScene& scene, float dt) = 0;
-        virtual void endMyLife(IScene& scene) = 0;
+        virtual void initMyBrain(void *) = 0;
+        virtual void updateBullying(void *, void *) = 0;
+        virtual void endMyLife(void *) = 0;
     };
 
 }
