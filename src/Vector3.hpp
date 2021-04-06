@@ -12,9 +12,7 @@ namespace arcade {
 
 namespace math {
 
-    /**
-     * @brief A three dimensional single-precision floating point vector
-     */
+    // Logic v2
     struct Vector3 {
         float x;
         float y;
