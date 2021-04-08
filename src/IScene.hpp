@@ -29,7 +29,7 @@ public:
     /**
      * @brief Unload all resources and cleanly terminate the process
      */
-    virtual void exit() const = 0;
+    virtual void exit() = 0;
 
     /**
      * @brief Push an event
