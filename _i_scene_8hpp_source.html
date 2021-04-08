@@ -100,30 +100,29 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classarcade_1_1_i_entity.html">IEntity</a>&amp; <a class="code" href="classarcade_1_1_i_scene.html#a7003826a8833a286a0b539e0df5d2cd3">newEntity</a>() = 0;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    [[deprecated(<span class="stringliteral">&quot;forEach should be used over getEntity for performance sake&quot;</span>)]]</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;std::reference_wrapper&lt;IEntity&gt;&gt; <a class="code" href="classarcade_1_1_i_scene.html#a093f1405651bda41a220b45df55bd9a5">getEntity</a>(</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">const</span> std::string&amp; name)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        = 0;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a3511a5b3905b0267a0fd7c90d765400f">removeEntity</a>(<span class="keyword">const</span> std::string&amp; name) = 0;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a3511a5b3905b0267a0fd7c90d765400f">removeEntity</a>(<span class="keyword">const</span> <a class="code" href="classarcade_1_1_i_entity.html">IEntity</a>&amp; entity) = 0;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a7c00d4a2377d72296bf86e59f02d5be0">addScore</a>(<span class="keywordtype">float</span> score) = 0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a8702bffd4b59a6a3785750c9ae6fb4fa">forEach</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code" href="classarcade_1_1_i_entity.html">IEntity</a>&amp;)&gt;) = 0;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a8702bffd4b59a6a3785750c9ae6fb4fa">forEach</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code" href="classarcade_1_1_i_entity.html">IEntity</a>&amp;)&gt;, <span class="keyword">const</span> std::string&amp; name)</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        = 0;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#aae9f64a274b9187410cb8bd354bff228">setWindowSize</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) = 0;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structarcade_1_1math_1_1_vector2.html">math::Vector2</a> <a class="code" href="classarcade_1_1_i_scene.html#a8e113b77896071c43d632e86a686b3dc">getWindowSize</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;};</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ISCENE_HPP_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    [[deprecated(<span class="stringliteral">&quot;forEach should be used over getEntity for performance &quot;</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                 <span class="stringliteral">&quot;sake&quot;</span>)]] <span class="keyword">virtual</span> std::vector&lt;std::reference_wrapper&lt;IEntity&gt;&gt;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classarcade_1_1_i_scene.html#a093f1405651bda41a220b45df55bd9a5">getEntity</a>(<span class="keyword">const</span> std::string&amp; name) = 0;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a3511a5b3905b0267a0fd7c90d765400f">removeEntity</a>(<span class="keyword">const</span> std::string&amp; name) = 0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a3511a5b3905b0267a0fd7c90d765400f">removeEntity</a>(<span class="keyword">const</span> <a class="code" href="classarcade_1_1_i_entity.html">IEntity</a>&amp; entity) = 0;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a7c00d4a2377d72296bf86e59f02d5be0">addScore</a>(<span class="keywordtype">float</span> score) = 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a8702bffd4b59a6a3785750c9ae6fb4fa">forEach</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code" href="classarcade_1_1_i_entity.html">IEntity</a>&amp;)&gt;) = 0;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#a8702bffd4b59a6a3785750c9ae6fb4fa">forEach</a>(std::function&lt;<span class="keywordtype">void</span>(<a class="code" href="classarcade_1_1_i_entity.html">IEntity</a>&amp;)&gt;, <span class="keyword">const</span> std::string&amp; name)</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        = 0;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classarcade_1_1_i_scene.html#aae9f64a274b9187410cb8bd354bff228">setWindowSize</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y) = 0;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="structarcade_1_1math_1_1_vector2.html">math::Vector2</a> <a class="code" href="classarcade_1_1_i_scene.html#a8e113b77896071c43d632e86a686b3dc">getWindowSize</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;}</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* !ISCENE_HPP_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassarcade_1_1_i_scene_html_a8e113b77896071c43d632e86a686b3dc"><div class="ttname"><a href="classarcade_1_1_i_scene.html#a8e113b77896071c43d632e86a686b3dc">arcade::IScene::getWindowSize</a></div><div class="ttdeci">virtual math::Vector2 getWindowSize() const =0</div><div class="ttdoc">Get the preferred window size (in game units)</div></div>
 <div class="ttc" id="aclassarcade_1_1_i_scene_html_aae9f64a274b9187410cb8bd354bff228"><div class="ttname"><a href="classarcade_1_1_i_scene.html#aae9f64a274b9187410cb8bd354bff228">arcade::IScene::setWindowSize</a></div><div class="ttdeci">virtual void setWindowSize(int x, int y)=0</div><div class="ttdoc">Set the preferred window size (in game units)</div></div>
